@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dead Drop</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script>
+function check(){
+  const key = (document.getElementById('k').value||'').trim().toLowerCase().replace(/\s+/g,'');
+  if(key==='ddp'){ // Dreams Don't Patch -> D D P -> ddp
+    document.getElementById('ok').style.display='block';
+    document.getElementById('form').style.display='none';
+  } else {
+    alert('invalid key');
+  }
+}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="brand">DEAD DROP</div>
+  <nav class="nav small"><a href="/">← Civic Portal</a></nav>
+</header>
+<main class="main">
+  <h1 class="glitch" data-text="Eyes forward. Hands clean.">Eyes forward. Hands clean.</h1>
+  <div id="form" class="card">
+    <div class="badge">ACCESS</div>
+    <p class="small">Enter key:</p>
+    <input id="k" placeholder="key" style="padding:8px;border-radius:8px;border:1px solid #1a2332;background:#0b0e12;color:#cbe3ff">
+    <button onclick="check()" style="padding:8px 12px;border-radius:8px;border:1px solid #1a2332;background:#0f141c;color:#cbe3ff;cursor:pointer">Unlock</button>
+    <p class="small">Hint: Three words; first letters.</p>
+  </div>
+  <div id="ok" class="card" style="display:none">
+    <div class="badge">DROP // 1</div>
+    <h3>Launch Bonus</h3>
+    <p class="small">Award your crew: 1 banked Flashback next session.</p>
+    <pre class="small">NPC Contact: Jax Verge (Fixer)
+Channel: whispersync@blackreach.city
+Note: “You’re on the list now.”</pre>
+  </div>
+</main>
+</body>
+</html>
